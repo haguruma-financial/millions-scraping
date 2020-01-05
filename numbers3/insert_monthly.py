@@ -26,7 +26,7 @@ for _i in range(1, len(tag_table)):
     info = [d.text for d in tag_table[_i].find_all('td')]
     data.append(info)
 
-# CSVへ挿
+# CSVへ挿入
 for _j in data:
     writer = csv.writer(output)
     writer.writerow(_j)
