@@ -1,4 +1,4 @@
-i
+
 from bs4 import BeautifulSoup
 import pandas as pd
 import requests
@@ -8,8 +8,8 @@ import csv
 
 # 指定
 MONTH = '201912'
-URL = 'https://takarakuji.rakuten.co.jp/backnumber/numbers4/201912/'
-CSV_FILE = '../assets/numbers3/201912.csv'
+URL = 'https://takarakuji.rakuten.co.jp/backnumber/numbers4/200201/'
+CSV_FILE = '../assets/numbers4/200201.csv'
 
 # アウトプット情報
 output = open(CSV_FILE, mode='w')
@@ -19,11 +19,16 @@ scraping = BeautifulSoup(requests.get(URL).content,'html.parser')
 
 # HTMLタグ
 tag_table = scraping.find_all('table')
+
 # 月間当選番号など
 # テーブル各データ取得
 data = []
 for _i in range(1, len(tag_table)):
+    # 回号
+    num = [f for f in tag_table[_i].find_all('th')[1]]
+    # 結果
     info = [d.text for d in tag_table[_i].find_all('td')]
+    # データへ
     data.append(info)
 
 # CSVへ挿入
