@@ -22,30 +22,30 @@ NUMBERS3 = {
         # ストレート
         u'straight': {
             u'num': u'246', # data[3] (int)
-            u'price': u'49500' # data[3] (str)
+            u'price': u'49,500' # data[3] (str)
 
         },
         # ボックス
         u'box': {
             u'num': u'1191', # data[4] (int)
-            u'price': u'8200' # data[5] (str)
+            u'price': u'8,200' # data[5] (str)
 
         },
         # セット
         u'set': {
             u'straight': {
                 u'num': u'665', # data[6] (int)
-                u'price': u'28800' # data[7] (str)
+                u'price': u'28,800' # data[7] (str)
             },
             u'box': {
                 u'num': u'2298', # data[8] (int)
-                u'price': u'4100' # data[9] (str)
+                u'price': u'4,100' # data[9] (str)
             },
         },
         # ミニ
         u'mini': {
             u'num': u'615', # data[10] (int)
-            u'price': u'4900' # data[11] (str)
+            u'price': u'4,900' # data[11] (str)
         }
     },
 }
