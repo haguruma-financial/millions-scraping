@@ -7,7 +7,7 @@ import time
 import csv
 
 # 指定
-MONTH = '200001'
+MONTH = '202001'
 URL = 'https://takarakuji.rakuten.co.jp/backnumber/numbers3/{0}/'.format(MONTH)
 CSV_FILE = '../assets/numbers3/{0}.csv'.format(MONTH)
 
