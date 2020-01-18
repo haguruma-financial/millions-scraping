@@ -84,3 +84,4 @@ for _i in range(0, len(lock)):
     print(lock[_i])
     db.collection(u'calendar').document(MONTH).update(lock[_i])
 
+print('end')
