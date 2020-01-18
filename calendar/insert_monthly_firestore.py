@@ -4,7 +4,7 @@ from firebase_admin import credentials
 from firebase_admin import firestore
 
 # 指定
-MONTH = '200001'
+MONTH = '202001'
 
 CSV_FILE_NUMERS3 = '../assets/numbers3/{0}.csv'.format(MONTH) 
 CSV_FILE_NUMERS4 = '../assets/numbers4/{0}.csv'.format(MONTH) 
@@ -42,22 +42,22 @@ with open(CSV_FILE_NUMERS4) as f:
         }
 
 # ロト6
-# with open(CSV_FILE_LOTO6) as f:
-#     reader = csv.reader(f)
-#     for row in reader:
-#         date = row[1].replace('/', '')
-#         # data[date]['loto6'] = {
-#         #     u'no': row[0].replace('第', '').replace('回', ''),
-#         #     u'num': [
-#         #         row[2],
-#         #         row[3],
-#         #         row[4],
-#         #         row[5],
-#         #         row[6],
-#         #         row[7],
-#         #         row[8]
-#         #     ]
-#         # }
+with open(CSV_FILE_LOTO6) as f:
+    reader = csv.reader(f)
+    for row in reader:
+        date = row[1].replace('/', '')
+        data[date]['loto6'] = {
+            u'no': row[0].replace('第', '').replace('回', ''),
+            u'num': [
+                row[2],
+                row[3],
+                row[4],
+                row[5],
+                row[6],
+                row[7],
+                row[8]
+            ]
+        }
 #         # ~ 200406
 #         data[date] = {
 #             u'loto6': {

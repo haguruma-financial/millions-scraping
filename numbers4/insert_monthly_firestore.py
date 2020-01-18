@@ -5,7 +5,7 @@ from firebase_admin import credentials
 from firebase_admin import firestore
 
 # 指定
-MONTH = '200001'
+MONTH = '202001'
 CSV_FILE = '../assets/numbers4/{0}.csv'.format(MONTH) 
 
 # CSVファイル
